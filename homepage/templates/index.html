@@ -8,33 +8,19 @@
 
     <style>
         body {
-          padding:0px;
-          margin:0px;
+          padding: 0;
+          margin: 0;
           font-family: 'Segoe UI', sans-serif;
         }
-        .hero {
-          background: url('static/admin/img/banner/banner1.jpeg') center center/cover no-repeat;
-          height: 900px;   /* full screen height */
-          width: 100%;     /* full width */
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          color: #fff;
-        }
-        .hero::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: rgba(0,0,0,0.35); /* optional overlay for text readability */
-        }
-        .hero .container {
-          position: relative;
-          z-index: 1;
+
+        /* ✅ Responsive Images */
+        .brand-card img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
         }
 
-
+        /* ✅ Card hover effect */
         .brand-card {
           transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -42,11 +28,22 @@
           transform: translateY(-5px);
           box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
+
         footer {
           background: #222;
           color: #ccc;
           padding: 20px 0;
           text-align: center;
+        }
+
+        /* ✅ Small screen text scaling */
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 2rem;
+          }
+          .hero p {
+            font-size: 1rem;
+          }
         }
     </style>
 </head>
@@ -70,14 +67,12 @@
     </div>
 </nav>
 
-<!-- 🔹 Hero Section -->
-<section class="hero mt-5">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Top Brands of Batteries</h1>
-        <p class="lead">Explore trusted battery brands powering your world.</p>
-        <a href="#brands" class="btn btn-warning btn-lg mt-3">Discover Brands</a>
-    </div>
-</section>
+
+<div class="container my-4 text-center">
+    <h2>Responsive Image Demo</h2>
+    <!-- Responsive Image -->
+    <img src="static/admin/img/banner/banner1.jpeg" class="img-fluid rounded shadow" alt="Responsive Image">
+</div>
 
 <!-- 🔹 Brands Section -->
 <section id="brands" class="py-5">
@@ -85,8 +80,8 @@
         <h2 class="mb-4 fw-bold">Popular Battery Brands</h2>
         <div class="row g-4">
             <!-- Duracell -->
-            <div class="col-md-4">
-                <div class="card brand-card">
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card brand-card h-100">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Duracell_logo.svg/512px-Duracell_logo.svg.png"
                          class="card-img-top p-3" alt="Duracell">
                     <div class="card-body">
@@ -97,8 +92,8 @@
                 </div>
             </div>
             <!-- Energizer -->
-            <div class="col-md-4">
-                <div class="card brand-card">
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card brand-card h-100">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Energizer_logo.svg/512px-Energizer_logo.svg.png"
                          class="card-img-top p-3" alt="Energizer">
                     <div class="card-body">
@@ -109,8 +104,8 @@
                 </div>
             </div>
             <!-- Exide -->
-            <div class="col-md-4">
-                <div class="card brand-card">
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card brand-card h-100">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Exide_Logo.svg/512px-Exide_Logo.svg.png"
                          class="card-img-top p-3" alt="Exide">
                     <div class="card-body">
