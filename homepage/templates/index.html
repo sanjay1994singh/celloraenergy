@@ -46,25 +46,43 @@
           }
         }
     </style>
+
+    <!-- 🔹 Custom CSS -->
+<style>
+  .logo-white-bg {
+    height: 40px;              /* Adjust logo height */
+    background: #fff;          /* White background */
+    padding: 5px;              /* Space inside white box */
+    border-radius: 6px;        /* Rounded edges */
+  }
+</style>
 </head>
 <body>
 
 <!-- 🔹 Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">🔋 Battery Brands</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#brands">Brands</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <!-- Logo with white background -->
+      <img src="static/admin/img/logo/cellora logo-02.png"
+           alt="Battery Brands Logo"
+           class="logo-white-bg me-2">
+      Battery Brands
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#brands">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 
